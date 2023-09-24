@@ -1,5 +1,8 @@
 import React from "react";
-import "./Home.css";
+ import "./Home.css";
+import { motion } from "framer-motion";
+ 
+ 
 
 const Home = () => {
   return (
@@ -11,30 +14,58 @@ const Home = () => {
       <div>
         <div className="main-div">
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <p className="para-1">
+            <motion.p
+              className="para-1"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
               We exist because we want to help you navigate <br />
               and harness the potential of this ever-changing <br /> digital
               landscape.
-            </p>
-            <h1>
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
               <span class="word">YOUR</span>
               <span class="word">GROWTH</span>
               <span class="word">PARTNERS</span>
-            </h1>
+            </motion.h1>
           </div>
 
           <div>
-            <img src="img\home.png" alt="" className="main-img" />
-            <img src="img\home2.png" className="sec-img" alt="" />
+            <motion.img
+              src="img\home.png"
+              alt=""
+              className="main-img"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            />
+            <motion.img
+              src="img\home2.png"
+              className="sec-img"
+              alt=""
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            />
           </div>
         </div>
         <div style={{ height: "60px" }}>
-          <p className="para-2">
+          <motion.p
+            className="para-2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             It's not a game of guesses, it's a game of numbers where growth is
             the <br /> ultimate goal. We leverage cutting-edge technology and
             data-driven <br /> insights to help you answer questions that unlock
             growth.
-          </p>
+          </motion.p>
         </div>
       </div>
       <section className="section-main">
@@ -119,28 +150,29 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="section-main2">
         <h1 className="brand-h1">Clients we work with</h1>
+        <div name="section1"className="img-row">
+          <img className="img-brand" src="img\hrx1.jpg" alt="" />
+          <img className="img-brand" src="img\hrx1.jpg" alt="" />
+          <img className="img-brand" src="img\AMEX.jpg" alt="" />
+          <img className="img-brand" src="img\AMEX.jpg" alt="" />
+          <img className="img-brand" src="img\Floh.jpg" alt="" />
+          <img className="img-brand" src="img\Artboard.jpg" alt="" />
+          <img className="img-brand" src="img\howl-thumbnail.jpg" alt="" />
+          <img className="img-brand" src="img\howl-thumbnail.jpg" alt="" />
+        </div>
         <div className="img-row">
-        <img className="img-brand" src="img\hrx1.jpg" alt="" />
-        <img className="img-brand" src="img\hrx1.jpg" alt="" />
-        <img className="img-brand" src="img\AMEX.jpg" alt="" />
-        <img className="img-brand" src="img\AMEX.jpg" alt="" />
-        <img className="img-brand" src="img\Floh.jpg" alt="" />
-        <img className="img-brand" src="img\Artboard.jpg" alt="" />
-        <img className="img-brand" src="img\howl-thumbnail.jpg" alt="" />
-        <img className="img-brand" src="img\howl-thumbnail.jpg" alt="" />
-      </div>
-      <div className="img-row">
-        <img className="img-brand" src="img\Howl-Website.jpg" alt="" />
-        <img className="img-brand" src="img\Howl-Website.jpg" alt="" />
-        <img className="img-brand" src="img\howl-thumbnail.jpg" alt="" />
-        <img className="img-brand" src="img\brand10.png" alt="" />
-        <img className="img-brand" src="img\mens.jpg" alt="" />
-        <img className="img-brand" src="img\brand7.png" alt="" />
-        <img className="img-brand" src="img\MBF.jpg" alt="" />
-        <img className="img-brand" src="img\MBF.jpg" alt="" />
-      </div>
+          <img className="img-brand" src="img\Howl-Website.jpg" alt="" />
+          <img className="img-brand" src="img\Howl-Website.jpg" alt="" />
+          <img className="img-brand" src="img\howl-thumbnail.jpg" alt="" />
+          <img className="img-brand" src="img\brand10.png" alt="" />
+          <img className="img-brand" src="img\mens.jpg" alt="" />
+          <img className="img-brand" src="img\brand7.png" alt="" />
+          <img className="img-brand" src="img\MBF.jpg" alt="" />
+          <img className="img-brand" src="img\MBF.jpg" alt="" />
+        </div>
       </section>
       <footer>
         <div className="foot-div1">
