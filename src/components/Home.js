@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
  import "./Home.css";
 import { motion } from "framer-motion";
- 
+ import AOS from "aos";
+ import 'aos/dist/aos.css'
  
 
 const Home = () => {
+  useEffect(()=> {
+    AOS.init({duration: 2000})
+  },[]);
   return (
     <>
       <header>
@@ -68,7 +72,7 @@ const Home = () => {
           </motion.p>
         </div>
       </div>
-      <section className="section-main">
+      <section className="section-main" data-aos="fade-up" >
         <div className="section-child1">
           <div>
             <ul className="list-main">
@@ -83,7 +87,7 @@ const Home = () => {
             <button className="section-btn" id="first-btn">
               Layer 1- stargic process steps
             </button>
-            <button className="section-btn" id="sec-btn">
+            <button className="section-btn"  id="sec-btn">
               Layer 2- Inputs & Intel Undertaken
             </button>
             <button className="section-btn" id="third-btn">
@@ -151,10 +155,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section-main2">
+      <section className="section-main2" data-aos="fade-up">
         <h1 className="brand-h1">Clients we work with</h1>
         <div name="section1"className="img-row">
-          <img className="img-brand" src="img\hrx1.jpg" alt="" />
+          <img className="img-brand"  src="img\hrx1.jpg" alt="" />
           <img className="img-brand" src="img\hrx1.jpg" alt="" />
           <img className="img-brand" src="img\AMEX.jpg" alt="" />
           <img className="img-brand" src="img\AMEX.jpg" alt="" />
@@ -175,7 +179,7 @@ const Home = () => {
         </div>
       </section>
       <footer>
-        <div className="foot-div1">
+        <div className="foot-div1" data-aos="fade-up">
           <h1 className="foot-h1">
             Keep track <br /> of the wolves <br />{" "}
             <img src="img\feedArrow.png" alt="" />
